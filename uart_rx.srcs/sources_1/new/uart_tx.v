@@ -1,4 +1,3 @@
-//Listing 8.3
 module uart_tx
    #(
      parameter DBIT = 8,     // # data bits

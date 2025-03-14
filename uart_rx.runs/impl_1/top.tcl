@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/admin/Desktop/Arquitectura de Computadoras/soluciones/uart_rx/uart_rx.runs/impl_1/top.tcl"
+  variable script "C:/Users/admin/Desktop/Arquitectura de Computadoras/otros/uart_tp2/uart_rx.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -106,10 +106,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
-  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 2  }
   open_checkpoint top_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/admin/Desktop/Arquitectura de Computadoras/soluciones/uart_rx/uart_rx.cache/wt} [current_project]
+  set_property webtalk.parent_dir {C:/Users/admin/Desktop/Arquitectura de Computadoras/otros/uart_tp2/uart_rx.cache/wt} [current_project]
 set_property TOP top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

@@ -1,4 +1,3 @@
-// Listing 4.20
 module fifo
    #(
     parameter B=8, // number of bits in a word

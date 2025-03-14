@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/admin/Desktop/Arquitectura de Computadoras/soluciones/uart_rx/uart_rx.runs/impl_1'
+HD_PWD='C:/Users/admin/Desktop/Arquitectura de Computadoras/otros/uart_tp2/uart_rx.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

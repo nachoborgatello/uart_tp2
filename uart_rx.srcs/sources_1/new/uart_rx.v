@@ -1,4 +1,3 @@
-//Listing 8.1
 module uart_rx
    #(
      parameter DBIT = 8,     // # data bits

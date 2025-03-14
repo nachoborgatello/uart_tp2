@@ -2,13 +2,12 @@
 
 module top
    #( // Default setting:
-      // 19600 baud, 8 data bits, 1 stop bit, 2^2 FIFO
-      parameter DBIT = 8,     // # data bits
-                SB_TICK = 16, // # ticks for stop bits, 16/24/32
-                              // for 1/1.5/2 stop bits
+      // 19200 baud, 8 data bits, 1 stop bit, 2^2 FIFO
+      parameter DBIT = 8,
+                SB_TICK = 16,
                 DVSR = 325,   // baud rate divisor
-                              // DVSR = 50MHz/(16*baudios)
-                DVSR_BIT = 10, // # bits of DVSR
+                              // DVSR = 100MHz/(16*baudios)
+                DVSR_BIT = 10,// # bits of DVSR
                 FIFO_W = 4    // # addr bits of FIFO
                               // # words in FIFO=2^FIFO_W
    )
@@ -58,9 +57,9 @@ module top
        .empty(rx_empty), .full(), .r_data(r_data));
     
     // OpCodes
-    localparam ALU_DATA_A_OP    = 8'b01100001;
-    localparam ALU_DATA_B_OP    = 8'b01100010;
-    localparam ALU_OPERATOR_OP  = 8'b01100011;
+    localparam ALU_DATA_A_OP    = 8'b11110101;
+    localparam ALU_DATA_B_OP    = 8'b11110110;
+    localparam ALU_OPERATOR_OP  = 8'b11110111;
         
     always @(posedge clk or posedge reset) begin
         if (reset) begin
